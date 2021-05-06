@@ -1,6 +1,6 @@
 module IpAnonymizer
   class HashIp
-    def initialize(app, key:)
+    def initialize(app, key: '')
       @app = app
       @key = key
     end
