@@ -17,7 +17,7 @@ module IpAnonymizer
     end
   end
 
-  def self.hash_ip(ip, key:, iterations: 1)
+  def self.hash_ip(ip, key: '', iterations: 1)
     addr = IPAddr.new(ip.to_s)
     key_len = addr.ipv4? ? 4 : 16
     family = addr.ipv4? ? Socket::AF_INET : Socket::AF_INET6
